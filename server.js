@@ -20,6 +20,8 @@ var postSchema = new mongoose.Schema({
 var Post = mongoose.model('Post', postSchema);
 
 // Routes
+app.use(express.static(__dirname + '/public/'));
+
 app.get("/", (req, res) => {
     Post.find({}, (err, posts) => {
         res.render('index', {

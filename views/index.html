@@ -13,7 +13,7 @@
     <title>بلاگ</title>
 
     <!--Import my css-->
-    <link type="text/css" rel="stylesheet" href="../public/css/style.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -22,21 +22,39 @@
     <div class="bg"></div>
 
 
-    <div class="container float-right">
-        <h1>بلاگ</h1>
+    <div class="container">
+        <!--text-white -->
+        <div class="">
+            <h1 class="col-12 text-right p-2 "> وبلاگ </h1>
 
-        <% for(let i = 0; i < posts.length; i++) { %>
-            <article>
-                <p>
-                    <%= posts[i].body %>
-                </p>
-            </article>
-            <% } %>
-                <form action="addPost" method="post">
+            <% for(let i = 0; i < posts.length; i++) { %>
+                <article class="col-4 text-right p-2 float-right">
+                    <!-- <p>
+                        <%= posts[i].body %>
+                    </p> -->
+                    <div class="card " style="width: 18rem;">
+                        <img class="card-img-top" src="../img/bg.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="Card-title"> <%= i+1 %> مقاله </h5>
+                            <p class="card-text">
+                                <%= posts[i].body %>
+                            </p>
+                            <a href="#" class="btn btn-primary float-right">جزئیات</a>
+                            <div class="text-left float-left p-2"> چند دقیقه پیش </div>
+                        </div>
+                    </div>
+                </article>
+                <% } %>
+            </div>
+            <div class="row col-12 p-3">
+                <form class="col-12 text-right p-2" action="addPost" method="post">
                     <textarea name="body"></textarea>
                     <br>
-                    <input type="submit" value="پست جدید" />
+                    <input type="submit" class="btn btn-primary" class="form-control" value="ارسال پست جدید" />
                 </form>
+
+            </div>
+            
     </div>
 
 

@@ -1,0 +1,19 @@
+body {
+    /* The image used */
+    /* background-image: url("../img/bg.jpg"); */
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@font-face{
+    font-family: iransans;
+    src: url(../font/IRANSansWeb.ttf)
+}
+* ,h1,h2,h3{
+    font-family: iransans;
+}
