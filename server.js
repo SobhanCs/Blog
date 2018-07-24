@@ -20,7 +20,7 @@ mongoose.connect("mongodb://localhost:27017/blog", {
 
 // var bodyParser = require('body-parser')
 
-app.engine('html', require('ejs').renderFile);
+app.engine('html', require('ejs').renderFile); //to ejs
 app.set('view engine', 'html');
 
 app.use(express.static('public')); // added to project according to tutorial
